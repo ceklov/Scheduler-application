@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="425.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.controller.TypeReportController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Type Report">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="appointmentTable" layoutX="14.0" layoutY="55.0" prefHeight="307.0" prefWidth="672.0">
+         <columns>
+            <TableColumn fx:id="dateColumn" prefWidth="125.0" text="Date" />
+            <TableColumn fx:id="startColumn" prefWidth="95.0" text="Start Time" />
+            <TableColumn fx:id="endColumn" prefWidth="95.0" text="End Time" />
+            <TableColumn fx:id="titleColumn" prefWidth="125.0" text="Type/Title" />
+            <TableColumn fx:id="customerColumn" prefWidth="125.0" text="Customer" />
+            <TableColumn fx:id="locationColumn" prefWidth="110.0" text="Location" />
+         </columns>
+      </TableView>
+      <Button fx:id="previousMonthButton" layoutX="125.0" layoutY="379.0" mnemonicParsing="false" onAction="#clickedPreviousMonth" prefWidth="110.0" text="&lt; Previous Month" />
+      <Button fx:id="nextMonthButton" layoutX="468.0" layoutY="379.0" mnemonicParsing="false" onAction="#clickedNextMonth" prefWidth="110.0" text="Next Month &gt;" />
+      <TextField fx:id="monthOfTextField" alignment="CENTER" editable="false" layoutX="276.0" layoutY="379.0" />
+      
+   </children>
+</AnchorPane>

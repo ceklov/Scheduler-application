@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="schedulerAnchorPane" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.controller.SchedulerMainController">
+   <children>
+      <TableView fx:id="schedulerMainTable" layoutX="15.0" layoutY="78.0" prefHeight="200.0" prefWidth="870.0">
+        <columns>
+          <TableColumn fx:id="customerNameColumn" prefWidth="149.0" text="Customer Name" />
+          <TableColumn fx:id="customerAddressColumn" minWidth="0.0" prefWidth="215.0" text="Address" />
+            <TableColumn fx:id="customerCityStateColumn" prefWidth="175.0" text="City, State" />
+            <TableColumn fx:id="customerZipColumn" minWidth="0.0" prefWidth="79.0" text="Postal Code" />
+            <TableColumn fx:id="customerCountryColumn" minWidth="0.0" prefWidth="120.0" text="Country" />
+            <TableColumn fx:id="customerPhoneColumn" minWidth="0.0" prefWidth="131.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="168.0" text="C195 Software II - Cody Eklov" />
+      <Label layoutX="14.0" layoutY="37.0" prefHeight="33.0" prefWidth="168.0" text="Scheduler">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="359.0" layoutY="298.0" prefHeight="40.0" prefWidth="525.0">
+        <buttons>
+            <Button fx:id="editCustomerButton" layoutX="506.0" layoutY="18.0" mnemonicParsing="false" onAction="#clickedEditCustomer" text="Edit Customer" />
+            <Button fx:id="deleteCustomer" layoutX="336.0" layoutY="18.0" mnemonicParsing="false" onAction="#clickedDeleteCustomer" prefHeight="25.0" prefWidth="166.0" text="Delete Customer" />
+            <Button fx:id="addCustomerButton" layoutX="362.0" layoutY="18.0" mnemonicParsing="false" onAction="#clickedAddCustomer" text="Add Customer" />
+        </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="15.0" layoutY="338.0" prefHeight="40.0" prefWidth="870.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#clickedTypeReport" text="Report: Type" />
+            <Button layoutX="456.0" layoutY="18.0" mnemonicParsing="false" onAction="#clickedCustomerReport" text="Report: Customer" />
+            <Button layoutX="456.0" layoutY="18.0" mnemonicParsing="false" onAction="#clickedLocationReport" text="Report: Location" />
+            <Button fx:id="appointmentsMonthButton" mnemonicParsing="false" onAction="#clickedAppointmentsMonth" text="Appointments (Month)" />
+          <Button fx:id="appointmentsWeekButton" minWidth="19.0" mnemonicParsing="false" onAction="#clickedAppointmentsWeek" prefHeight="25.0" prefWidth="234.0" text="Appointments (Week)" />
+        </buttons>
+      </ButtonBar>
+      <Button fx:id="scheduleAppointmentButton" layoutX="34.0" layoutY="306.0" mnemonicParsing="false" onAction="#clickedScheduleAppointment" prefHeight="25.0" prefWidth="162.0" text="Schedule Appointment" />
+   </children>
+</AnchorPane>
